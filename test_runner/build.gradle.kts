@@ -68,6 +68,9 @@ dependencies {
     compile(Libs.KOTLIN_STD_LIB)
     compile(Libs.KOTLIN_COROUTINES_CORE)
 
+    compile("com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.9.6")
+    compile("com.fasterxml.woodstox:woodstox-core:5.1.0")
+
     // https://github.com/remkop/picocli
     compile("info.picocli:picocli:3.5.2")
 
