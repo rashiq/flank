@@ -1,0 +1,264 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites>
+  <testsuite name='EarlGreyExampleSwiftTests' hostname='localhost' tests='17' failures='1' errors='0' time='25.881'>
+    <properties />
+    <testcase name='testBasicSelection()' classname='EarlGreyExampleSwiftTests' time='1.954' />
+    <testcase name='testBasicSelectionActionAssert()' classname='EarlGreyExampleSwiftTests' time='0.719' />
+    <testcase name='testBasicSelectionAndAction()' classname='EarlGreyExampleSwiftTests' time='0.584'>
+      <failure>Exception: NoMatchingElementException
+
+Exception Name: NoMatchingElementException
+Exception Reason: Cannot find UI element.
+Exception with Action: {
+  "Action Name":  "Tap",
+  "Element Matcher":  "(respondsToSelector(accessibilityIdentifier) &amp;&amp; accessibilityID('ClickMeaaa'))",
+  "Recovery Suggestion":  "Check if the element exists in the UI hierarchy printed below. If it exists, adjust the matcher so that it accurately matches element."
+}
+
+Exception Details: Error Trace: [
+  {
+    "Description":  "Interaction cannot continue because the desired element was not found.",
+    "Error Domain":  "com.google.earlgrey.ElementInteractionErrorDomain",
+    "Error Code":  "0",
+    "File Name":  "GREYElementInteraction.m",
+    "Function Name":  "-[GREYElementInteraction matchedElementsWithTimeout:error:]",
+    "Line":  "124",
+    "TestCase Class":  "EarlGreyExampleTestsSwift.EarlGreyExampleSwiftTests",
+    "TestCase Method":  "testBasicSelectionAndAction"
+  }
+]
+
+Bundle ID: com.google.earlgrey.samples.EarlGrey
+
+Stack Trace: (
+	0   EarlGrey                            0x00000001007097ec -[GREYDefaultFailureHandler handleException:details:] + 1564
+	1   EarlGrey                            0x00000001006ee738 -[GREYElementInteraction grey_handleFailureOfAction:actionError:userProvidedOutError:] + 5052
+	2   EarlGrey                            0x00000001006eade8 __46-[GREYElementInteraction performAction:error:]_block_invoke + 1824
+	3   EarlGrey                            0x0000000100716d50 __59-[GREYUIThreadExecutor executeSyncWithTimeout:block:error:]_block_invoke + 72
+	4   EarlGrey                            0x00000001006d12ec __54-[GREYRunLoopSpinner grey_checkConditionInActiveMode:]_block_invoke + 400
+	5   CoreFoundation                      0x0000000184bbb590 &lt;redacted&gt; + 20
+	6   CoreFoundation                      0x0000000184bbae60 &lt;redacted&gt; + 288
+	7   CoreFoundation                      0x0000000184bb8b4c &lt;redacted&gt; + 1032
+	8   CoreFoundation                      0x0000000184ad8c58 CFRunLoopRunSpecific + 436
+	9   EarlGrey                            0x00000001006d103c -[GREYRunLoopSpinner grey_checkConditionInActiveMode:] + 376
+	10  EarlGrey                            0x00000001006cfe7c -[GREYRunLoopSpinner spinWithStopConditionBlock:] + 432
+	11  EarlGrey                            0x0000000100716584 -[GREYUIThreadExecutor executeSyncWithTimeout:block:error:] + 1220
+	12  EarlGrey                            0x00000001006e9c34 -[GREYElementInteraction performAction:error:] + 1852
+	13  EarlGrey                            0x00000001006e9498 -[GREYElementInteraction performAction:] + 72
+	14  EarlGreyExampleSwiftTests           0x00000001017e8528 _T0So15GREYInteractionP25EarlGreyExampleTestsSwiftE7performxSQySo10GREYAction_pGF + 188
+	15  EarlGreyExampleSwiftTests           0x00000001017e8e74 _T025EarlGreyExampleTestsSwift0abceD0C27testBasicSelectionAndActionyyF + 196
+	16  EarlGreyExampleSwiftTests           0x00000001017e8ec4 _T025EarlGreyExampleTestsSwift0abceD0C27testBasicSelectionAndActionyyFTo + 40
+	17  CoreFoundation                      0x0000000184c1aad0 &lt;redacted&gt; + 144
+	18  CoreFoundation                      0x0000000184af936c &lt;redacted&gt; + 292
+	19  EarlGrey                            0x00000001006e2080 -[GREYTestCaseInvocation invoke] + 104
+	20  XCTest                              0x000000010135be00 __24-[XCTestCase invokeTest]_block_invoke_2.190 + 68
+	21  XCTest                              0x00000001013c1f98 -[XCTMemoryChecker _assertInvalidObjectsDeallocatedAfterScope:] + 68
+	22  XCTest                              0x0000000101364370 -[XCTestCase assertInvalidObjectsDeallocatedAfterScope:] + 112
+	23  XCTest                              0x000000010135bd84 __24-[XCTestCase invokeTest]_block_invoke.184 + 204
+	24  XCTest                              0x00000001013b2a8c +[XCTestCase(Failures) performFailableBlock:shouldInterruptTest:] + 44
+	25  XCTest                              0x00000001013b29cc -[XCTestCase(Failures) _performTurningExceptionsIntoFailuresInterruptAfterHandling:block:] + 64
+	26  XCTest                              0x000000010135b9f8 __24-[XCTestCase invokeTest]_block_invoke + 812
+	27  XCTest                              0x00000001013b77e0 -[XCUITestContext performInScope:] + 264
+	28  XCTest                              0x000000010135b6b0 -[XCTestCase invokeTest] + 172
+	29  EarlGrey                            0x00000001006d73f0 -[XCTestCase(GREYAdditions) grey_invokeTest] + 1408
+	30  XCTest                              0x000000010135d304 __26-[XCTestCase performTest:]_block_invoke_2 + 40
+	31  XCTest                              0x00000001013b2a8c +[XCTestCase(Failures) performFailableBlock:shouldInterruptTest:] + 44
+	32  XCTest                              0x00000001013b29cc -[XCTestCase(Failures) _performTurningExceptionsIntoFailuresInterruptAfterHandling:block:] + 64
+	33  XCTest                              0x000000010135d1a4 __26-[XCTestCase performTest:]_block_invoke.329 + 96
+	34  XCTest                              0x00000001013beef8 +[XCTContext runInContextForTestCase:block:] + 216
+	35  XCTest                              0x000000010135c920 -[XCTestCase performTest:] + 656
+	36  XCTest                              0x000000010139cae0 -[XCTest runTest] + 60
+	37  XCTest                              0x0000000101358330 __27-[XCTestSuite performTest:]_block_invoke + 300
+	38  XCTest                              0x0000000101357c34 -[XCTestSuite _performProtectedSectionForTest:testSection:] + 68
+	39  XCTest                              0x0000000101357ec8 -[XCTestSuite performTest:] + 272
+	40  XCTest                              0x000000010139cae0 -[XCTest runTest] + 60
+	41  XCTest                              0x0000000101358330 __27-[XCTestSuite performTest:]_block_invoke + 300
+	42  XCTest                              0x0000000101357c34 -[XCTestSuite _performProtectedSectionForTest:testSection:] + 68
+	43  XCTest                              0x0000000101357ec8 -[XCTestSuite performTest:] + 272
+	44  XCTest                              0x000000010139cae0 -[XCTest runTest] + 60
+	45  XCTest                              0x0000000101358330 __27-[XCTestSuite performTest:]_block_invoke + 300
+	46  XCTest                              0x0000000101357c34 -[XCTestSuite _performProtectedSectionForTest:testSection:] + 68
+	47  XCTest                              0x0000000101357ec8 -[XCTestSuite performTest:] + 272
+	48  XCTest                              0x000000010139cae0 -[XCTest runTest] + 60
+	49  XCTest                              0x00000001013cbcb8 __44-[XCTTestRunSession runTestsAndReturnError:]_block_invoke + 44
+	50  XCTest                              0x000000010136ff54 -[XCTestObservationCenter _observeTestExecutionForBlock:] + 524
+	51  XCTest                              0x00000001013cbaa8 -[XCTTestRunSession runTestsAndReturnError:] + 388
+	52  XCTest                              0x000000010133f2a4 -[XCTestDriver runTestsAndReturnError:] + 432
+	53  XCTest                              0x00000001013bd9e8 _XCTestMain + 940
+	54  CoreFoundation                      0x0000000184bbb590 &lt;redacted&gt; + 20
+	55  CoreFoundation                      0x0000000184bbae60 &lt;redacted&gt; + 288
+	56  CoreFoundation                      0x0000000184bb8b70 &lt;redacted&gt; + 1068
+	57  CoreFoundation                      0x0000000184ad8c58 CFRunLoopRunSpecific + 436
+	58  GraphicsServices                    0x0000000186984f84 GSEventRunModal + 100
+	59  UIKit                               0x000000018e2315c4 UIApplicationMain + 236
+	60  EarlGreyExampleSwift                0x000000010065d7d4 main + 76
+	61  libdyld.dylib                       0x00000001845f856c &lt;redacted&gt; + 4
+)
+
+Screenshots: {
+  "Screenshot At Failure":  "/var/mobile/Containers/Data/Application/B3349B8A-63AE-439A-9267-5BAA996E7643/Documents/EarlGreyExampleTestsSwift.EarlGreyExampleSwiftTests_testBasicSelectionAndAction-NoMatchingElementException-0232319D-A74C-45C1-93C8-EA216FDD7E95/EarlGreyExampleTestsSwift.EarlGreyExampleSwiftTests_testBasicSelectionAndAction.png",
+  "Visibility Checker Most Recent Before Image":  "/var/mobile/Containers/Data/Application/B3349B8A-63AE-439A-9267-5BAA996E7643/Documents/EarlGreyExampleTestsSwift.EarlGreyExampleSwiftTests_testBasicSelectionAndAction-NoMatchingElementException-0232319D-A74C-45C1-93C8-EA216FDD7E95/EarlGreyExampleTestsSwift.EarlGreyExampleSwiftTests_testBasicSelectionAndAction_before.png",
+  "Visibility Checker Most Recent Expected After Image":  "/var/mobile/Containers/Data/Application/B3349B8A-63AE-439A-9267-5BAA996E7643/Documents/EarlGreyExampleTestsSwift.EarlGreyExampleSwiftTests_testBasicSelectionAndAction-NoMatchingElementException-0232319D-A74C-45C1-93C8-EA216FDD7E95/EarlGreyExampleTestsSwift.EarlGreyExampleSwiftTests_testBasicSelectionAndAction_after_expected.png",
+  "Visibility Checker Most Recent Actual After Image":  "/var/mobile/Containers/Data/Application/B3349B8A-63AE-439A-9267-5BAA996E7643/Documents/EarlGreyExampleTestsSwift.EarlGreyExampleSwiftTests_testBasicSelectionAndAction-NoMatchingElementException-0232319D-A74C-45C1-93C8-EA216FDD7E95/EarlGreyExampleTestsSwift.EarlGreyExampleSwiftTests_testBasicSelectionAndAction_after_actual.png"
+}
+
+UI hierarchy (ordered by window level, front to back as rendered):
+
+Legend: {
+  "[AX]":  "Accessibility",
+  "[UIE]":  "User Interaction Enabled",
+  "[Window 1]":  "Frontmost Window"
+}
+
+========== Window 1 ==========
+
+&lt;UIWindow:0x12dd0e200; AX=N; AX.frame={{0, 0}, {375, 667}}; AX.activationPoint={187.5, 333.5}; AX.traits='UIAccessibilityTraitNone'; AX.focused='N'; frame={{0, 0}, {375, 667}}; opaque; alpha=1&gt;
+  |--&lt;UIView:0x12de058e0; AX=N; AX.frame={{0, 0}, {375, 667}}; AX.activationPoint={187.5, 333.5}; AX.traits='UIAccessibilityTraitNone'; AX.focused='N'; frame={{0, 0}, {375, 667}}; opaque; alpha=1&gt;
+  |  |--&lt;UITableView:0x12e830c00; AX=N; AX.id='table'; AX.frame={{10, 180}, {320, 487}}; AX.activationPoint={170, 423.5}; AX.traits='UIAccessibilityTraitNone'; AX.focused='N'; frame={{10, 180}, {320, 487}}; opaque; alpha=1&gt;
+  |  |  |--&lt;UIImageView:0x12de17750; AX=N; AX.frame={{13, 661.5}, {311.5, 2.5}}; AX.activationPoint={168.75, 662.75}; AX.traits='UIAccessibilityTraitImage'; AX.focused='N'; frame={{3, 481.5}, {311.5, 2.5}}; alpha=0; UIE=N&gt;
+  |  |  |--&lt;UIImageView:0x12de17ca0; AX=N; AX.frame={{324.5, 183}, {2.5, 55}}; AX.activationPoint={325.75, 210.5}; AX.traits='UIAccessibilityTraitImage'; AX.focused='N'; frame={{314.5, 3}, {2.5, 55}}; alpha=0; UIE=N&gt;
+  |  |  |--&lt;UITableViewCell:0x12e80cc00; AX=N; AX.id='Cell1'; AX.frame={{10, 180}, {320, 45}}; AX.activationPoint={170, 202.5}; AX.traits='UIAccessibilityTraitNone'; AX.focused='N'; frame={{0, 0}, {320, 45}}; opaque; alpha=1; text='Cell1'&gt;
+  |  |  |  |--&lt;_UITableViewCellSeparatorView:0x12dd03890; AX=N; AX.frame={{25, 224.5}, {305, 0.5}}; AX.activationPoint={177.5, 224.75}; AX.traits='UIAccessibilityTraitNone'; AX.focused='N'; frame={{15, 44.5}, {305, 0.5}}; opaque; alpha=1&gt;
+  |  |  |  |--&lt;UITableViewCellContentView:0x12de037e0; AX=N; AX.frame={{10, 180}, {320, 44.5}}; AX.activationPoint={170, 202.25}; AX.traits='UIAccessibilityTraitNone'; AX.focused='N'; frame={{0, 0}, {320, 44.5}}; opaque; alpha=1&gt;
+  |  |  |  |  |--&lt;UITableViewLabel:0x12de1c4e0; AX=Y; AX.label='Cell1'; AX.frame={{25, 180}, {290, 44.5}}; AX.activationPoint={170, 202.25}; AX.traits='UIAccessibilityTraitStaticText'; AX.focused='N'; frame={{15, 0}, {290, 44.5}}; opaque; alpha=1; UIE=N; text='Cell1'&gt;
+  |  |  |--&lt;UITableViewCell:0x12e027e00; AX=N; AX.id='September 18, 2018'; AX.frame={{10, 225}, {320, 45}}; AX.activationPoint={170, 247.5}; AX.traits='UIAccessibilityTraitNone'; AX.focused='N'; frame={{0, 45}, {320, 45}}; opaque; alpha=1; text='September 18, 2018'&gt;
+  |  |  |  |--&lt;_UITableViewCellSeparatorView:0x12dd00020; AX=N; AX.frame={{25, 269.5}, {305, 0.5}}; AX.activationPoint={177.5, 269.75}; AX.traits='UIAccessibilityTraitNone'; AX.focused='N'; frame={{15, 44.5}, {305, 0.5}}; opaque; alpha=1&gt;
+  |  |  |  |--&lt;UITableViewCellContentView:0x12dd044e0; AX=N; AX.frame={{10, 225}, {320, 44.5}}; AX.activationPoint={170, 247.25}; AX.traits='UIAccessibilityTraitNone'; AX.focused='N'; frame={{0, 0}, {320, 44.5}}; opaque; alpha=1&gt;
+  |  |  |  |  |--&lt;UITableViewLabel:0x12dd09970; AX=Y; AX.label='September 18, 2018'; AX.frame={{25, 225}, {290, 44.5}}; AX.activationPoint={170, 247.25}; AX.traits='UIAccessibilityTraitStaticText'; AX.focused='N'; frame={{15, 0}, {290, 44.5}}; opaque; alpha=1; UIE=N; text='September 18, 2018'&gt;
+  |  |  |--&lt;UITableViewCell:0x12e041800; AX=N; AX.id='September 19, 2018'; AX.frame={{10, 270}, {320, 45}}; AX.activationPoint={170, 292.5}; AX.traits='UIAccessibilityTraitNone'; AX.focused='N'; frame={{0, 90}, {320, 45}}; opaque; alpha=1; text='September 19, 2018'&gt;
+  |  |  |  |--&lt;_UITableViewCellSeparatorView:0x12dd08ea0; AX=N; AX.frame={{25, 314.5}, {305, 0.5}}; AX.activationPoint={177.5, 314.75}; AX.traits='UIAccessibilityTraitNone'; AX.focused='N'; frame={{15, 44.5}, {305, 0.5}}; opaque; alpha=1&gt;
+  |  |  |  |--&lt;UITableViewCellContentView:0x12dd0ad60; AX=N; AX.frame={{10, 270}, {320, 44.5}}; AX.activationPoint={170, 292.25}; AX.traits='UIAccessibilityTraitNone'; AX.focused='N'; frame={{0, 0}, {320, 44.5}}; opaque; alpha=1&gt;
+  |  |  |  |  |--&lt;UITableViewLabel:0x12dd08ba0; AX=Y; AX.label='September 19, 2018'; AX.frame={{25, 270}, {290, 44.5}}; AX.activationPoint={170, 292.25}; AX.traits='UIAccessibilityTraitStaticText'; AX.focused='N'; frame={{15, 0}, {290, 44.5}}; opaque; alpha=1; UIE=N; text='September 19, 2018'&gt;
+  |  |  |--&lt;UITableViewCell:0x12e044600; AX=N; AX.id='September 20, 2018'; AX.frame={{10, 315}, {320, 45}}; AX.activationPoint={170, 337.5}; AX.traits='UIAccessibilityTraitNone'; AX.focused='N'; frame={{0, 135}, {320, 45}}; opaque; alpha=1; text='September 20, 2018'&gt;
+  |  |  |  |--&lt;_UITableViewCellSeparatorView:0x12dd1d420; AX=N; AX.frame={{25, 359.5}, {305, 0.5}}; AX.activationPoint={177.5, 359.75}; AX.traits='UIAccessibilityTraitNone'; AX.focused='N'; frame={{15, 44.5}, {305, 0.5}}; opaque; alpha=1&gt;
+  |  |  |  |--&lt;UITableViewCellContentView:0x12dd19d30; AX=N; AX.frame={{10, 315}, {320, 44.5}}; AX.activationPoint={170, 337.25}; AX.traits='UIAccessibilityTraitNone'; AX.focused='N'; frame={{0, 0}, {320, 44.5}}; opaque; alpha=1&gt;
+  |  |  |  |  |--&lt;UITableViewLabel:0x12dd0b970; AX=Y; AX.label='September 20, 2018'; AX.frame={{25, 315}, {290, 44.5}}; AX.activationPoint={170, 337.25}; AX.traits='UIAccessibilityTraitStaticText'; AX.focused='N'; frame={{15, 0}, {290, 44.5}}; opaque; alpha=1; UIE=N; text='September 20, 2018'&gt;
+  |  |  |--&lt;UITableViewCell:0x12e047800; AX=N; AX.id='September 21, 2018'; AX.frame={{10, 360}, {320, 45}}; AX.activationPoint={170, 382.5}; AX.traits='UIAccessibilityTraitNone'; AX.focused='N'; frame={{0, 180}, {320, 45}}; opaque; alpha=1; text='September 21, 2018'&gt;
+  |  |  |  |--&lt;_UITableViewCellSeparatorView:0x12dd17960; AX=N; AX.frame={{25, 404.5}, {305, 0.5}}; AX.activationPoint={177.5, 404.75}; AX.traits='UIAccessibilityTraitNone'; AX.focused='N'; frame={{15, 44.5}, {305, 0.5}}; opaque; alpha=1&gt;
+  |  |  |  |--&lt;UITableViewCellContentView:0x12dd1d630; AX=N; AX.frame={{10, 360}, {320, 44.5}}; AX.activationPoint={170, 382.25}; AX.traits='UIAccessibilityTraitNone'; AX.focused='N'; frame={{0, 0}, {320, 44.5}}; opaque; alpha=1&gt;
+  |  |  |  |  |--&lt;UITableViewLabel:0x12dd17660; AX=Y; AX.label='September 21, 2018'; AX.frame={{25, 360}, {290, 44.5}}; AX.activationPoint={170, 382.25}; AX.traits='UIAccessibilityTraitStaticText'; AX.focused='N'; frame={{15, 0}, {290, 44.5}}; opaque; alpha=1; UIE=N; text='September 21, 2018'&gt;
+  |  |  |--&lt;UITableViewCell:0x12e04d400; AX=N; AX.id='September 22, 2018'; AX.frame={{10, 405}, {320, 45}}; AX.activationPoint={170, 427.5}; AX.traits='UIAccessibilityTraitNone'; AX.focused='N'; frame={{0, 225}, {320, 45}}; opaque; alpha=1; text='September 22, 2018'&gt;
+  |  |  |  |--&lt;_UITableViewCellSeparatorView:0x12dd181d0; AX=N; AX.frame={{25, 449.5}, {305, 0.5}}; AX.activationPoint={177.5, 449.75}; AX.traits='UIAccessibilityTraitNone'; AX.focused='N'; frame={{15, 44.5}, {305, 0.5}}; opaque; alpha=1&gt;
+  |  |  |  |--&lt;UITableViewCellContentView:0x12dd17b70; AX=N; AX.frame={{10, 405}, {320, 44.5}}; AX.activationPoint={170, 427.25}; AX.traits='UIAccessibilityTraitNone'; AX.focused='N'; frame={{0, 0}, {320, 44.5}}; opaque; alpha=1&gt;
+  |  |  |  |  |--&lt;UITableViewLabel:0x12dd17ed0; AX=Y; AX.label='September 22, 2018'; AX.frame={{25, 405}, {290, 44.5}}; AX.activationPoint={170, 427.25}; AX.traits='UIAccessibilityTraitStaticText'; AX.focused='N'; frame={{15, 0}, {290, 44.5}}; opaque; alpha=1; UIE=N; text='September 22, 2018'&gt;
+  |  |  |--&lt;UITableViewCell:0x12e055200; AX=N; AX.id='September 23, 2018'; AX.frame={{10, 450}, {320, 45}}; AX.activationPoint={170, 472.5}; AX.traits='UIAccessibilityTraitNone'; AX.focused='N'; frame={{0, 270}, {320, 45}}; opaque; alpha=1; text='September 23, 2018'&gt;
+  |  |  |  |--&lt;_UITableViewCellSeparatorView:0x12dd1a460; AX=N; AX.frame={{25, 494.5}, {305, 0.5}}; AX.activationPoint={177.5, 494.75}; AX.traits='UIAccessibilityTraitNone'; AX.focused='N'; frame={{15, 44.5}, {305, 0.5}}; opaque; alpha=1&gt;
+  |  |  |  |--&lt;UITableViewCellContentView:0x12dd183e0; AX=N; AX.frame={{10, 450}, {320, 44.5}}; AX.activationPoint={170, 472.25}; AX.traits='UIAccessibilityTraitNone'; AX.focused='N'; frame={{0, 0}, {320, 44.5}}; opaque; alpha=1&gt;
+  |  |  |  |  |--&lt;UITableViewLabel:0x12dd1a160; AX=Y; AX.label='September 23, 2018'; AX.frame={{25, 450}, {290, 44.5}}; AX.activationPoint={170, 472.25}; AX.traits='UIAccessibilityTraitStaticText'; AX.focused='N'; frame={{15, 0}, {290, 44.5}}; opaque; alpha=1; UIE=N; text='September 23, 2018'&gt;
+  |  |  |--&lt;UITableViewCell:0x12e059a00; AX=N; AX.id='September 24, 2018'; AX.frame={{10, 495}, {320, 45}}; AX.activationPoint={170, 517.5}; AX.traits='UIAccessibilityTraitNone'; AX.focused='N'; frame={{0, 315}, {320, 45}}; opaque; alpha=1; text='September 24, 2018'&gt;
+  |  |  |  |--&lt;_UITableViewCellSeparatorView:0x12dd1d990; AX=N; AX.frame={{25, 539.5}, {305, 0.5}}; AX.activationPoint={177.5, 539.75}; AX.traits='UIAccessibilityTraitNone'; AX.focused='N'; frame={{15, 44.5}, {305, 0.5}}; opaque; alpha=1&gt;
+  |  |  |  |--&lt;UITableViewCellContentView:0x12dd1a670; AX=N; AX.frame={{10, 495}, {320, 44.5}}; AX.activationPoint={170, 517.25}; AX.traits='UIAccessibilityTraitNone'; AX.focused='N'; frame={{0, 0}, {320, 44.5}}; opaque; alpha=1&gt;
+  |  |  |  |  |--&lt;UITableViewLabel:0x12dd19670; AX=Y; AX.label='September 24, 2018'; AX.frame={{25, 495}, {290, 44.5}}; AX.activationPoint={170, 517.25}; AX.traits='UIAccessibilityTraitStaticText'; AX.focused='N'; frame={{15, 0}, {290, 44.5}}; opaque; alpha=1; UIE=N; text='September 24, 2018'&gt;
+  |  |  |--&lt;UITableViewCell:0x12e05e600; AX=N; AX.id='Cell9'; AX.frame={{10, 540}, {320, 45}}; AX.activationPoint={170, 562.5}; AX.traits='UIAccessibilityTraitNone'; AX.focused='N'; frame={{0, 360}, {320, 45}}; opaque; alpha=1; text='Cell9'&gt;
+  |  |  |  |--&lt;_UITableViewCellSeparatorView:0x12dd1e200; AX=N; AX.frame={{25, 584.5}, {305, 0.5}}; AX.activationPoint={177.5, 584.75}; AX.traits='UIAccessibilityTraitNone'; AX.focused='N'; frame={{15, 44.5}, {305, 0.5}}; opaque; alpha=1&gt;
+  |  |  |  |--&lt;UITableViewCellContentView:0x12dd1dba0; AX=N; AX.frame={{10, 540}, {320, 44.5}}; AX.activationPoint={170, 562.25}; AX.traits='UIAccessibilityTraitNone'; AX.focused='N'; frame={{0, 0}, {320, 44.5}}; opaque; alpha=1&gt;
+  |  |  |  |  |--&lt;UITableViewLabel:0x12dd1df00; AX=Y; AX.label='Cell9'; AX.frame={{25, 540}, {290, 44.5}}; AX.activationPoint={170, 562.25}; AX.traits='UIAccessibilityTraitStaticText'; AX.focused='N'; frame={{15, 0}, {290, 44.5}}; opaque; alpha=1; UIE=N; text='Cell9'&gt;
+  |  |  |--&lt;UITableViewCell:0x12e065200; AX=N; AX.id='Cell10'; AX.frame={{10, 585}, {320, 45}}; AX.activationPoint={170, 607.5}; AX.traits='UIAccessibilityTraitNone'; AX.focused='N'; frame={{0, 405}, {320, 45}}; opaque; alpha=1; text='Cell10'&gt;
+  |  |  |  |--&lt;_UITableViewCellSeparatorView:0x12dd1ea70; AX=N; AX.frame={{25, 629.5}, {305, 0.5}}; AX.activationPoint={177.5, 629.75}; AX.traits='UIAccessibilityTraitNone'; AX.focused='N'; frame={{15, 44.5}, {305, 0.5}}; opaque; alpha=1&gt;
+  |  |  |  |--&lt;UITableViewCellContentView:0x12dd1e410; AX=N; AX.frame={{10, 585}, {320, 44.5}}; AX.activationPoint={170, 607.25}; AX.traits='UIAccessibilityTraitNone'; AX.focused='N'; frame={{0, 0}, {320, 44.5}}; opaque; alpha=1&gt;
+  |  |  |  |  |--&lt;UITableViewLabel:0x12dd1e770; AX=Y; AX.label='Cell10'; AX.frame={{25, 585}, {290, 44.5}}; AX.activationPoint={170, 607.25}; AX.traits='UIAccessibilityTraitStaticText'; AX.focused='N'; frame={{15, 0}, {290, 44.5}}; opaque; alpha=1; UIE=N; text='Cell10'&gt;
+  |  |  |--&lt;UITableViewCell:0x12e069800; AX=N; AX.id='Cell11'; AX.frame={{10, 630}, {320, 45}}; AX.activationPoint={170, 652.5}; AX.traits='UIAccessibilityTraitNone'; AX.focused='N'; frame={{0, 450}, {320, 45}}; opaque; alpha=1; text='Cell11'&gt;
+  |  |  |  |--&lt;_UITableViewCellSeparatorView:0x12dd1f2e0; AX=N; AX.frame={{25, 674.5}, {305, 0.5}}; AX.activationPoint={177.5, 674.75}; AX.traits='UIAccessibilityTraitNone'; AX.focused='N'; frame={{15, 44.5}, {305, 0.5}}; opaque; alpha=1&gt;
+  |  |  |  |--&lt;UITableViewCellContentView:0x12dd1ec80; AX=N; AX.frame={{10, 630}, {320, 44.5}}; AX.activationPoint={170, 652.25}; AX.traits='UIAccessibilityTraitNone'; AX.focused='N'; frame={{0, 0}, {320, 44.5}}; opaque; alpha=1&gt;
+  |  |  |  |  |--&lt;UITableViewLabel:0x12dd1efe0; AX=Y; AX.label='Cell11'; AX.frame={{25, 630}, {290, 44.5}}; AX.activationPoint={170, 652.25}; AX.traits='UIAccessibilityTraitStaticText'; AX.focused='N'; frame={{15, 0}, {290, 44.5}}; opaque; alpha=1; UIE=N; text='Cell11'&gt;
+  |  |--&lt;UIButton:0x12de0a880; AX=Y; AX.id='Send'; AX.label='SendForLayoutTest'; AX.frame={{130, 40}, {100, 30}}; AX.activationPoint={180, 55}; AX.traits='UIAccessibilityTraitButton'; AX.focused='N'; frame={{130, 40}, {100, 30}}; alpha=1&gt;
+  |  |  |--&lt;UIButtonLabel:0x12dd1f6f0; AX=Y; AX.label='Send'; AX.frame={{162.5, 46}, {35.5, 18}}; AX.activationPoint={180.25, 55}; AX.traits='UIAccessibilityTraitStaticText'; AX.focused='N'; frame={{32.5, 6}, {35.5, 18}}; alpha=1; UIE=N; text='Send'&gt;
+  |  |--&lt;UIButton:0x12de06ec0; AX=Y; AX.id='ClickMe'; AX.label='ClickMe'; AX.frame={{10, 40}, {100, 30}}; AX.activationPoint={60, 55}; AX.traits='UIAccessibilityTraitButton'; AX.focused='N'; frame={{10, 40}, {100, 30}}; alpha=1&gt;
+  |  |  |--&lt;UIButtonLabel:0x12dd20a40; AX=Y; AX.label='ClickMe'; AX.frame={{32.5, 46}, {55, 18}}; AX.activationPoint={60, 55}; AX.traits='UIAccessibilityTraitStaticText'; AX.focused='N'; frame={{22.5, 6}, {55, 18}}; alpha=1; UIE=N; text='ClickMe'&gt;
+  |  |--&lt;EarlGreyExampleSwift.SendMessageView:0x12de056e0; AX=N; AX.frame={{0, 0}, {0, 0}}; AX.activationPoint={0, 0}; AX.traits='UIAccessibilityTraitNone'; AX.focused='N'; frame={{0, 0}, {0, 0}}; opaque; alpha=1&gt;
+  |  |  |--&lt;UIButton:0x12de0afa0; AX=Y; AX.id='Send'; AX.label='Send'; AX.frame={{10, 110}, {100, 30}}; AX.activationPoint={60, 125}; AX.traits='UIAccessibilityTraitButton'; AX.focused='N'; frame={{10, 110}, {100, 30}}; alpha=1&gt;
+  |  |  |  |--&lt;UIButtonLabel:0x12dd21130; AX=Y; AX.label='Send'; AX.frame={{42.5, 116}, {35.5, 18}}; AX.activationPoint={60.25, 125}; AX.traits='UIAccessibilityTraitStaticText'; AX.focused='N'; frame={{32.5, 6}, {35.5, 18}}; alpha=1; UIE=N; text='Send'&gt;
+  |  |--&lt;_UILayoutGuide:0x12de060c0; AX=N; AX.frame={{0, 667}, {0, 0}}; AX.activationPoint={0, 667}; AX.traits='UIAccessibilityTraitNone'; AX.focused='N'; frame={{0, 667}, {0, 0}}; opaque; hidden; alpha=1&gt;
+  |  |--&lt;_UILayoutGuide:0x12de05cc0; AX=N; AX.frame={{0, 0}, {0, 20}}; AX.activationPoint={0, 10}; AX.traits='UIAccessibilityTraitNone'; AX.focused='N'; frame={{0, 0}, {0, 20}}; opaque; hidden; alpha=1&gt;
+
+/Users/medwards/code/EarlGrey/Demo/EarlGreyExample/EarlGreyExampleSwiftTests/EarlGreyExampleSwiftTests.swift:39
+      </failure>
+      <failure>failed: caught "EarlGreyInternalTestInterruptException", "Immediately halt execution of testcase"
+(
+	0   CoreFoundation                      0x0000000184c1317c &lt;redacted&gt; + 148
+	1   libobjc.A.dylib                     0x0000000183e5c528 objc_exception_throw + 56
+	2   CoreFoundation                      0x0000000184c12e2c &lt;redacted&gt; + 0
+	3   EarlGrey                            0x00000001006d6c80 -[XCTestCase(GREYAdditions) grey_markAsFailedAtLine:inFile:description:] + 216
+	4   EarlGrey                            0x0000000100709914 -[GREYDefaultFailureHandler handleException:details:] + 1860
+	5   EarlGrey                            0x00000001006ee738 -[GREYElementInteraction grey_handleFailureOfAction:actionError:userProvidedOutError:] + 5052
+	6   EarlGrey                            0x00000001006eade8 __46-[GREYElementInteraction performAction:error:]_block_invoke + 1824
+	7   EarlGrey                            0x0000000100716d50 __59-[GREYUIThreadExecutor executeSyncWithTimeout:block:error:]_block_invoke + 72
+	8   EarlGrey                            0x00000001006d12ec __54-[GREYRunLoopSpinner grey_checkConditionInActiveMode:]_block_invoke + 400
+	9   CoreFoundation                      0x0000000184bbb590 &lt;redacted&gt; + 20
+	10  CoreFoundation                      0x0000000184bbae60 &lt;redacted&gt; + 288
+	11  CoreFoundation                      0x0000000184bb8b4c &lt;redacted&gt; + 1032
+	12  CoreFoundation                      0x0000000184ad8c58 CFRunLoopRunSpecific + 436
+	13  EarlGrey                            0x00000001006d103c -[GREYRunLoopSpinner grey_checkConditionInActiveMode:] + 376
+	14  EarlGrey                            0x00000001006cfe7c -[GREYRunLoopSpinner spinWithStopConditionBlock:] + 432
+	15  EarlGrey                            0x0000000100716584 -[GREYUIThreadExecutor executeSyncWithTimeout:block:error:] + 1220
+	16  EarlGrey                            0x00000001006e9c34 -[GREYElementInteraction performAction:error:] + 1852
+	17  EarlGrey                            0x00000001006e9498 -[GREYElementInteraction performAction:] + 72
+	18  EarlGreyExampleSwiftTests           0x00000001017e8528 _T0So15GREYInteractionP25EarlGreyExampleTestsSwiftE7performxSQySo10GREYAction_pGF + 188
+	19  EarlGreyExampleSwiftTests           0x00000001017e8e74 _T025EarlGreyExampleTestsSwift0abceD0C27testBasicSelectionAndActionyyF + 196
+	20  EarlGreyExampleSwiftTests           0x00000001017e8ec4 _T025EarlGreyExampleTestsSwift0abceD0C27testBasicSelectionAndActionyyFTo + 40
+	21  CoreFoundation                      0x0000000184c1aad0 &lt;redacted&gt; + 144
+	22  CoreFoundation                      0x0000000184af936c &lt;redacted&gt; + 292
+	23  EarlGrey                            0x00000001006e2080 -[GREYTestCaseInvocation invoke] + 104
+	24  XCTest                              0x000000010135be00 __24-[XCTestCase invokeTest]_block_invoke_2.190 + 68
+	25  XCTest                              0x00000001013c1f98 -[XCTMemoryChecker _assertInvalidObjectsDeallocatedAfterScope:] + 68
+	26  XCTest                              0x0000000101364370 -[XCTestCase assertInvalidObjectsDeallocatedAfterScope:] + 112
+	27  XCTest                              0x000000010135bd84 __24-[XCTestCase invokeTest]_block_invoke.184 + 204
+	28  XCTest                              0x00000001013b2a8c +[XCTestCase(Failures) performFailableBlock:shouldInterruptTest:] + 44
+	29  XCTest                              0x00000001013b29cc -[XCTestCase(Failures) _performTurningExceptionsIntoFailuresInterruptAfterHandling:block:] + 64
+	30  XCTest                              0x000000010135b9f8 __24-[XCTestCase invokeTest]_block_invoke + 812
+	31  XCTest                              0x00000001013b77e0 -[XCUITestContext performInScope:] + 264
+	32  XCTest                              0x000000010135b6b0 -[XCTestCase invokeTest] + 172
+	33  EarlGrey                            0x00000001006d73f0 -[XCTestCase(GREYAdditions) grey_invokeTest] + 1408
+	34  XCTest                              0x000000010135d304 __26-[XCTestCase performTest:]_block_invoke_2 + 40
+	35  XCTest                              0x00000001013b2a8c +[XCTestCase(Failures) performFailableBlock:shouldInterruptTest:] + 44
+	36  XCTest                              0x00000001013b29cc -[XCTestCase(Failures) _performTurningExceptionsIntoFailuresInterruptAfterHandling:block:] + 64
+	37  XCTest                              0x000000010135d1a4 __26-[XCTestCase performTest:]_block_invoke.329 + 96
+	38  XCTest                              0x00000001013beef8 +[XCTContext runInContextForTestCase:block:] + 216
+	39  XCTest                              0x000000010135c920 -[XCTestCase performTest:] + 656
+	40  XCTest                              0x000000010139cae0 -[XCTest runTest] + 60
+	41  XCTest                              0x0000000101358330 __27-[XCTestSuite performTest:]_block_invoke + 300
+	42  XCTest                              0x0000000101357c34 -[XCTestSuite _performProtectedSectionForTest:testSection:] + 68
+	43  XCTest                              0x0000000101357ec8 -[XCTestSuite performTest:] + 272
+	44  XCTest                              0x000000010139cae0 -[XCTest runTest] + 60
+	45  XCTest                              0x0000000101358330 __27-[XCTestSuite performTest:]_block_invoke + 300
+	46  XCTest                              0x0000000101357c34 -[XCTestSuite _performProtectedSectionForTest:testSection:] + 68
+	47  XCTest                              0x0000000101357ec8 -[XCTestSuite performTest:] + 272
+	48  XCTest                              0x000000010139cae0 -[XCTest runTest] + 60
+	49  XCTest                              0x0000000101358330 __27-[XCTestSuite performTest:]_block_invoke + 300
+	50  XCTest                              0x0000000101357c34 -[XCTestSuite _performProtectedSectionForTest:testSection:] + 68
+	51  XCTest                              0x0000000101357ec8 -[XCTestSuite performTest:] + 272
+	52  XCTest                              0x000000010139cae0 -[XCTest runTest] + 60
+	53  XCTest                              0x00000001013cbcb8 __44-[XCTTestRunSession runTestsAndReturnError:]_block_invoke + 44
+	54  XCTest                              0x000000010136ff54 -[XCTestObservationCenter _observeTestExecutionForBlock:] + 524
+	55  XCTest                              0x00000001013cbaa8 -[XCTTestRunSession runTestsAndReturnError:] + 388
+	56  XCTest                              0x000000010133f2a4 -[XCTestDriver runTestsAndReturnError:] + 432
+	57  XCTest                              0x00000001013bd9e8 _XCTestMain + 940
+	58  CoreFoundation                      0x0000000184bbb590 &lt;redacted&gt; + 20
+	59  CoreFoundation                      0x0000000184bbae60 &lt;redacted&gt; + 288
+	60  CoreFoundation                      0x0000000184bb8b70 &lt;redacted&gt; + 1068
+	61  CoreFoundation                      0x0000000184ad8c58 CFRunLoopRunSpecific + 436
+	62  GraphicsServices                    0x0000000186984f84 GSEventRunModal + 100
+	63  UIKit                               0x000000018e2315c4 UIApplicationMain + 236
+	64  EarlGreyExampleSwift                0x000000010065d7d4 main + 76
+	65  libdyld.dylib                       0x00000001845f856c &lt;redacted&gt; + 4
+)/Users/medwards/code/EarlGrey/Demo/EarlGreyExample/EarlGreyExampleSwiftTests/EarlGrey.swift:163
+      </failure>
+    </testcase>
+    <testcase name='testBasicSelectionAndAssert()' classname='EarlGreyExampleSwiftTests' time='0.051' />
+    <testcase name='testCatchErrorOnFailure()' classname='EarlGreyExampleSwiftTests' time='0.006' />
+    <testcase name='testCollectionMatchers()' classname='EarlGreyExampleSwiftTests' time='0.649' />
+    <testcase name='testCustomAction()' classname='EarlGreyExampleSwiftTests' time='2.003' />
+    <testcase name='testLayout()' classname='EarlGreyExampleSwiftTests' time='0.002' />
+    <testcase name='testMyCustomTestThatIAddedToVerify()' classname='EarlGreyExampleSwiftTests' time='0.0' />
+    <testcase name='testSelectionOnMultipleElements()' classname='EarlGreyExampleSwiftTests' time='0.006' />
+    <testcase name='testTableCellOutOfScreen()' classname='EarlGreyExampleSwiftTests' time='19.012' />
+    <testcase name='testWithCondition()' classname='EarlGreyExampleSwiftTests' time='0.56' />
+    <testcase name='testWithCustomAssertion()' classname='EarlGreyExampleSwiftTests' time='0.001' />
+    <testcase name='testWithCustomFailureHandler()' classname='EarlGreyExampleSwiftTests' time='0.005' />
+    <testcase name='testWithCustomMatcher()' classname='EarlGreyExampleSwiftTests' time='0.155' />
+    <testcase name='testWithGreyAssertions()' classname='EarlGreyExampleSwiftTests' time='0.002' />
+    <testcase name='testWithInRoot()' classname='EarlGreyExampleSwiftTests' time='0.156' />
+    <system-out />
+    <system-err />
+  </testsuite>
+</testsuites>
