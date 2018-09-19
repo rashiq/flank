@@ -28,5 +28,4 @@ data class TestSuccess(
 data class TestFailure(
     val stackTrace: String,
     val webLink: String
-//            val screenshot: String? // TODO: screenshot support
 )

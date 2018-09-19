@@ -68,9 +68,6 @@ dependencies {
     compile(Libs.KOTLIN_STD_LIB)
     compile(Libs.KOTLIN_COROUTINES_CORE)
 
-    compile("com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.9.6")
-    compile("com.fasterxml.woodstox:woodstox-core:5.1.0")
-
     // https://github.com/remkop/picocli
     compile("info.picocli:picocli:3.5.2")
 
@@ -99,6 +96,8 @@ dependencies {
     compile("com.fasterxml.jackson.core:jackson-databind:${Versions.JACKSON}")
     compile("com.fasterxml.jackson.module:jackson-module-kotlin:${Versions.JACKSON}")
     compile("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:${Versions.JACKSON}")
+    compile("com.fasterxml.jackson.dataformat:jackson-dataformat-xml:${Versions.JACKSON}")
+    compile("com.fasterxml.woodstox:woodstox-core:5.1.0")
 
     // https://github.com/jhy/jsoup/releases
     testImplementation("org.jsoup:jsoup:1.11.3")

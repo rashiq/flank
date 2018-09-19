@@ -275,7 +275,7 @@ object TestRunner {
         refreshMatrices(matrixMap, config)
         fetchArtifacts(matrixMap)
         // Must generate reports *after* fetching xml artifacts since reports require xml
-        ReportManager.generate(matrixMap)
+        ReportManager.generate(matrixMap, config)
     }
 
     suspend fun newRun(config: IArgs) {
@@ -286,7 +286,7 @@ object TestRunner {
             pollMatrices(matrixMap, config)
             fetchArtifacts(matrixMap)
 
-            val testsSuccessful = ReportManager.generate(matrixMap)
+            val testsSuccessful = ReportManager.generate(matrixMap, config)
             if (!testsSuccessful) System.exit(1)
         }
     }

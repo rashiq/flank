@@ -17,10 +17,10 @@ private fun xmlBytes(path: String): ByteArray {
     return Files.readAllBytes(Paths.get(path))
 }
 
-fun parseAndroidXml(path: String) : JUnitTestSuite {
+fun parseAndroidXml(path: String): JUnitTestSuite {
     return xmlMapper.readValue(xmlBytes(path), JUnitTestSuite::class.java)
 }
 
-fun parseIosXml(path: String) : JUnitTestSuites {
+fun parseIosXml(path: String): JUnitTestSuites {
     return xmlMapper.readValue(xmlBytes(path), JUnitTestSuites::class.java)
 }

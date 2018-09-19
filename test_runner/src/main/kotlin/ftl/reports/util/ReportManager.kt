@@ -1,6 +1,8 @@
 package ftl.reports.util
 
 import com.sun.org.apache.xerces.internal.dom.DeferredElementImpl
+import ftl.args.IArgs
+import ftl.args.IosArgs
 import ftl.json.MatrixMap
 import ftl.reports.CostReport
 import ftl.reports.HtmlErrorReport
@@ -29,13 +31,21 @@ object ReportManager {
         return xmlFiles
     }
 
-    private fun parseJUnitXml(matrices: MatrixMap): TestSuite {
+    private fun readAndroidXml(matrices: MatrixMap): TestSuite {
+        return readIosXml(matrices)
+    }
+
+    private fun readIosXml(matrices: MatrixMap): TestSuite {
         val testCases = mutableMapOf<String, TestResults>()
         val matrixMapValues = matrices.map.values
 
         val xmlFiles = findXmlFiles(matrices)
         var failureCount = 0
         var successCount = 0
+
+        // TODO: parse files into JUnitTestSuites
+        // TODO: update reports to use JUnitTestSuites - replace TestData
+        // TODO: attach webLink to JUnitTestCase for reporting?
 
         xmlFiles.forEach { file ->
             val xml = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(file)
@@ -98,8 +108,13 @@ object ReportManager {
     }
 
     /** Returns true if there were no test failures */
-    fun generate(matrices: MatrixMap): Boolean {
-        val testSuite = parseJUnitXml(matrices)
+    fun generate(matrices: MatrixMap, config: IArgs): Boolean {
+        val iosXml = config is IosArgs
+        val testSuite = if (iosXml) {
+            readIosXml(matrices)
+        } else {
+            readAndroidXml(matrices)
+        }
         val testSuccessful = matrices.allSuccessful()
 
         listOf(
